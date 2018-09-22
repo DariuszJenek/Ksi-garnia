@@ -1,0 +1,25 @@
+https://l.facebook.com/l.php?u=https%3A%2F%2Fpl.khanacademy.org%2Fcomputing%2Fcomputer-programming%2Fsql%2Fsql-basics%2Fpp%2Fproject-design-a-store-database&h=AT1hZvci0pNgPUpPY4lTYXaOh3n_g36JmUA0WwfvTiD8mnWx9MJKbnjqXRZ2OqOt3UYJEvd9NFpKI2dti02XsPCDFQx4iRdEckbAxwj73s3mKCWZv7AOR-0jRMzXYOE5VRI7yNCNhWgWbNsaRKRpqELX-5G4OVMZTUbOryQR_S_gpltrf8CeUEiIbH28GW_1fXpFAwoypMUEu7h7xBpq2QwxEq8YQ0LGvt9PDiuD2hetrKGYKPs9McKg-dCiVZj9IF-x9MieMPdM4HoslCgeHuLucwToanBasPAfdrzbX1ptXH8oIvaelfcyrM-aKh3FyQI-uVSDI_IQTXbCGwllfIjjbw1dtiSYrSVwmis2ADAWzxEX1IWSIsBZalL8OwKMMc2HYFTsu3ydE6GBSsKKlqQIWT9h8I-TjrM
+Użyj zapytań do bazy, aby przesortować przedmioty, które posiadasz w sklepie wg ceny. Na koniec wypisz minimum jedną statystykę dotyczącą twoich towarów.
+
+Moje rozwiązanie:
+
+CREATE TABLE 'Księgarnia' ('id' integer, 'Autor' text, 'Tytuł' text, 'Wydawnictwo' text, 'ISBN' integer, 'Cena' numeric);
+INSERT INTO 'Księgarnia' VALUES ('1', 'Michał Kolupa', 'Wykłady z metod ilościowych dla ekonomistów', 'Wydawnictwo C.H. Beck', '978-83-255-1605-5', 65.00);
+INSERT INTO 'Księgarnia' VALUES ('2', 'Witold Mizerski', 'Tablice matematyczne', 'Wydawnictwo Adamantan', '978-83-7350-102-70', 29.90);
+INSERT INTO 'Księgarnia' VALUES ('3', 'Marcin Szeliga', 'SQL. Praktyczny kurs', 'Wydawnictwo Helion', '978-83-24-633-739', 49.00);
+INSERT INTO 'Księgarnia' VALUES ('4', 'Joe Vitale', 'Hipnotyzm słowa','Wydawnictwo Helion','978-83-246-1202-4', 47.00);
+INSERT INTO 'Księgarnia' VALUES ('5', 'Tomasz Korol', 'Nowe podejście do analizy wskaźnikowej w przedsiębiorstwie', 'Wydawnictwo Wolters Kluwer', '978-83-264-4043-4', 69.00);
+INSERT INTO 'Księgarnia' VALUES ('6', 'Magdfalena Olczyk', 'Podstawy makroekonomii w przykładach i zadaniach','Wydawnictwo CeDeWu', '978-83-755-6229-3', 39.00); 
+INSERT INTO 'Księgarnia' VALUES ('7', 'Peter M. Senge', 'Piąta dyscyplina materiały dla praktyka', 'Wydawnictwo Wolters Kluwer', '978-83-7526-167-7', 89.00);
+INSERT INTO 'Księgarnia' VALUES ('8', 'Anthony Giddens', 'Socjologia', 'Wydawnictwo Naukowe PWN', '978-83-01-14408-4', 95.00);
+INSERT INTO 'Księgarnia' VALUES ('9', 'Robert B. Cialdini', 'Wywieranie wpływu na lusdzi', 'Gdańskie Wydawnictwo Psychologiczne', '978-83-7489-101-1', 49.90);
+INSERT INTO 'Księgarnia' VALUES ('10', 'Peter M. Senge', 'Piąta dyscyplina materiały dla praktyka', 'Wydawnictwo Wolters Kluwer', '978-83-7526-167-7', 55.00);
+INSERT INTO 'Księgarnia' VALUES ('11', 'Elliot Aronso n', 'Człowiek istota społeczna', 'Wydawnictwo Naukowe PWN', '978-83-01-14497-5', 70.00);
+INSERT INTO 'Księgarnia' VALUES ('12', 'Agnieszka Rękas', 'Mediacja i sądownictwo polubowne', 'Ministerstwo Sprawiedliwości', '978-83-929646-5-0', 60.00);
+INSERT INTO 'Księgarnia' VALUES ('13', 'Adam Hamrol', 'Zarządzanie jakością', 'Wydawnictwo Naukowe PWN', '978-83-01-16775-2', 40.00);
+INSERT INTO 'Księgarnia' VALUES ('14', 'Ireneusz Rutkowski', 'Strategie produktu', 'Polskie Wydawnictwo Ekonomiczne', '978-83-208-1935-9', 35.00);
+INSERT INTO 'Księgarnia' VALUES ('15', 'Peter M. Senge', 'Piąta dyscyplina', 'Wydawnictwo Wolters Kluwer', '978-83-7526-167-8', 45.00)
+SORT BY 6 ASC
+AVG (6);
+
+Czy ktoś mogłby powiedzieć, co jest źle?
